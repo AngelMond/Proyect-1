@@ -21,10 +21,10 @@
         <nav>
             <ul>
 
-                <li><a href="">About Me</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">Resume</a></li>
-                <li><a href="">Contac</a></li>
+                <li><a href="#aboutMyself">About Me</a></li>
+                <li><a href="#myWork">Portfolio</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contac</a></li>
             </ul>
         </nav>
     </header>
@@ -37,7 +37,7 @@
             
             <div id="mySkills">
                 <h3>My Skills</h3>
-                <div id="skillImages">
+                <div id="imagesContainer">
                     <img class="skillsImages" id="html5" src="assets/images/html55.jpg" alt="HTML-Image">
                     <img class="skillsImages" src="assets/images/CSS3.jpg" alt="CSS3-Image">
                     <img class="skillsImages" src="assets/images/JS.jpg" alt="JS-Image">
@@ -47,8 +47,34 @@
             
             <div id="resume">
                 <h3>Resume</h3>
-                <a href="download"></a>
+                <div id="imagePdf">
+                    <img src="assets/images/pdf.jpg" alt="">
+                </div>
+                
+                <span> <a href="">Download-Resume</a></span></a>
             </div>
+
+            <div id="socialMedia">
+
+                <h3>Social Media</h3>
+                <div id="linkedin" class="fontSymbols " >
+                    <span> l &nbsp;</span>
+                    <a href="">Linked In</a> 
+                    
+                </div>
+                
+                <div id="facebook" class="fontSymbols">
+                    <span>f &nbsp;</span>
+                    <a href="">Facebook</a>
+                    
+                </div>
+               
+                <div id="github">
+                   <img src="assets/images/github.png" alt="" width="30px">
+                    <a href="https://github.com/AngelMond" target="_blank"> &nbsp; Github</a>
+                </div> 
+            </div>
+
         </aside>
 
 
@@ -71,7 +97,7 @@
 
                         <div class="proyect" id="proyect1">
                             <h4>My first proyect</h4>
-                            <img src="assets/images/greenday-proyect.png" alt="Protect 1 Image"  width="300px" height="210px">
+                            <img src="assets/images/greenday-proyect.png" alt="Protect 1 Image"  width="350px" height="210px">
                             <div class="proyectLinks" >
                                 <span><a href="https://angelmond.github.io/Grenday-proyect/" target="_blank">Web App</a></span>
                                 <span><a href="https://github.com/AngelMond/Grenday-proyect" target="_blank">Repository</a></span>
@@ -144,7 +170,9 @@
     </main>
 
     <footer>
-        Made by Angel Mondragon &copy All Rights Reserved
+
+        <span>Made by Angel Mondragon &copy All Rights Reserved</span>
+        
     </footer>
 
 

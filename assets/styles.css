@@ -1,4 +1,23 @@
+:root{
+    --color-text: #1a025a;
+    --color-h1-h2: #FF8826;
+    --color-h3-h4: rgb(172, 241, 92);
+    --border-color:#EFEFEF;
+    --color-font-transition:aliceblue;
+}
 
+
+/* WEB SYMBOL FONTS*/
+@font-face{
+    font-family: "WebSymbolsRegular" ;
+    src: url('../assets/fonts/websymbols-regular-webfont.eot');
+    src: url('../assets/fonts/websymbols-regular-webfont.eoteot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/websymbols-regular-webfont.woff') format('woff'),
+         url('../assets/fonts/websymbols-regular-webfont.ttf') format('truetype'),
+         url('../assets/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* START HEADER ESTYLES*/
 header{  
@@ -13,7 +32,7 @@ header{
 header h1{
     font-size: 45px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #FF8826 ;
+    color: var(--color-h1-h2) ;
     opacity: .7;
 }
 
@@ -22,7 +41,7 @@ header h2{
     margin: 10px ;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
-    color: #FF8826;
+    color: var(--color-h1-h2);
     opacity: .7;
 }
 
@@ -35,6 +54,7 @@ header img{
 header nav{
     margin-top: 10px;
 }
+
 
 header ul{
     display: inline-flex;
@@ -97,31 +117,86 @@ aside h3{
     flex-basis: 100%;
     text-align: center;
     font-size: 27px;
-    color: rgb(172, 241, 92);
+    color: var(--color-h3-h4);
     font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
-#mySkills{
-    text-align: center;
+aside a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+aside a:hover{
+    color: var(--color-font-transition) ;
     
 }
 
-#skillImages{
+
+/* STYLES FOR DIV CONTAINER'S INSIDE ASIDE TAG*/
+#mySkills,
+#resume,
+#socialMedia{
     margin-bottom: 150px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #19FFAA, 0px 0px 6px #19FFAA, 0px 2px 7px #19FFAA, 2px 0px 10px #19FFAA, -2px -2px 10px #19FFAA;
 }
 
-#resume{
-   
-}
 
 
-
+/* SKILLS IMAGES */
 .skillsImages{
     width: 70px;
     border-radius: 100px;
     margin: 5px;
 }
+
+/*DIV FOR RESUME*/
+
+#resume{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#resume #imagePdf{
+    flex: 1 100%;
+    margin-bottom: 10px;
+}
+
+#resume img{
+   border-radius: 5px;
+}
+
+#resume a{
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+/* DIV FOR SOCIAL MEDIA*/
+
+#linkedin,
+#facebook,
+#github{
+    margin: 25px 10px;
+    font-size: 25px;
+}
+
+.fontSymbols span{
+    font-family:  "WebSymbolsRegular";
+    font-size: 30px;
+}
+
+#github img{
+    border-radius: 15px;
+}
+
+
+
+
 
 
 
@@ -129,13 +204,13 @@ aside h3{
 
 /* STYLES FOR SECTION AND MY 3 ARTICLES*/
 .articles{
-    margin-bottom: 100px;
+   margin-bottom: 150px;
 }
 
 
 .articles h3{
     font-size: 27px;
-    color: rgb(172, 241, 92);
+    color: var(--color-h3-h4);
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 20px;
 }
@@ -144,9 +219,9 @@ aside h3{
 
 .articles p{
     font-family: serif;
-    font-size: 18px;   
-    line-height: 22px;
-    color: black;
+    font-size: 22px;   
+    line-height: 24px;
+    color: var(--color-text);
 }
 
 
@@ -162,7 +237,8 @@ aside h3{
 }
 
 #myWork h3{
-    margin-bottom: 90px;
+    margin-bottom: 60px;
+    text-align: center;
 }
 
 
@@ -192,19 +268,25 @@ aside h3{
 
 /* STYLES FOR THE HEADER OF THE PROYECTS*/
 .proyect h4{
-    font-size: 20px;
+    font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
     margin-bottom: 7px;
     margin-top: 10px;
-    color: rgb(172, 241, 92) ;
+    color: var(--color-h3-h4) ;
     font-weight: 600;
     opacity: .9;
+}
+
+/* BORDER RADIUS FOR THE PROYECT IMAGES*/
+.proyect img{
+    border-radius: 4px;
 }
 
 /* CONTAINER FOR LINKS*/
 .proyectLinks{
     padding: 12px 7px;
-    display: block;
+    display: none;
 }
 
 #linkProyect2,
@@ -220,7 +302,7 @@ aside h3{
 
 .proyect a{
     text-decoration: none;
-    color: #1a025a;
+    color: var(--color-text);
     opacity: .9;
     font-weight: 500;
     transition: 290ms;
@@ -238,15 +320,13 @@ aside h3{
 }
 
 .proyect a:hover{
-    color: aliceblue;
+    color: var(--color-font-transition);
 }
 
 
-/*ESTE LLEVA EL HOVER*/
+.proyect:hover {
 
-.proyect {
-
-    box-shadow: 1px 1px 5px #19FFAA, 0px 0px 6px #19FFAA, 0px 2px 7px #19FFAA, 2px 0px 10px #19FFAA, -2px -2px 10px #19FFAA;
+    box-shadow: 0px 5px 5px #42E0C8, 0px 10px 10px #42E0C8, 0px -2px 5px #19FFAA, 0px 0px 6px #19FFAA, 0px 0px 7px #19FFAA, 0px 0px 10px #19FFAA;
     border: 2px solid  #19FFAA;
     border-radius: 10px;
 }
@@ -254,16 +334,12 @@ aside h3{
 
 
 
-
-
-
-
-
 /*THIRD ARTICLE CONTACT*/
 #contact{
     flex-basis: 80%;
-    margin-top: 80px;
+    padding-top: 250px;
     text-align: center;
+    
 }
 
 .input{
@@ -274,24 +350,22 @@ aside h3{
 #contact form{
     width: 70%;
     margin: 0 auto;
-   
     padding: 10px;
    font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     
-    
-    
 }
 
 #contact form:hover {
-    box-shadow: 1px 1px 5px #19FFAA, 0px 0px 6px #19FFAA, 0px 2px 7px #19FFAA, 2px 0px 10px #19FFAA, -2px -2px 10px #19FFAA;
-    border: 2px solid  #19FFAA;
+    box-shadow: 0px 5px 5px #42E0C8, 0px 8px 9px #42E0C8, 0px 0px 7px #19FFAA, 0px -6px 10px #19FFAA, 0px -10px 15px #19FFAA;
+    border: 1px solid var(--border-color);
     border-radius: 80px;
 }
 
+/* FOCUS FOR MOBILE DEVICES TO DISPLAY STYLES*/
 #contact form:focus {
-    box-shadow: 1px 1px 5px #19FFAA, 0px 0px 6px #19FFAA, 0px 2px 7px #19FFAA, 2px 0px 10px #19FFAA, -2px -2px 10px #19FFAA;
-    border: 2px solid  #19FFAA;
+    box-shadow: 1px 1px 5px #19FFAA, 0px 0px 10px #19FFAA, 0px 0px 11px #19FFAA, 2px 0px 10px #19FFAA, -2px -2px 10px #19FFAA;
+    border: 1px solid var(--border-color);
     border-radius: 80px;
 }
 
@@ -302,30 +376,43 @@ input[type="textarea"] {
     width: 40%;
     height: 22px ;
     border-radius: 4px;
+    outline: none;
 }
 
 input[type="submit"]{
     width: 15%;
     border-radius: 10px;
-    background-color: #27F5B4;
     border: none;
 }
 
 input[type="submit"]:hover{
-    border:  10px 1px 5px #19FFAA, 0px 0px 6px #19FFAA, 0px 2px 7px #19FFAA, 2px 0px 10px #19FFAA, -2px -2px 10px #19FFAA;
-    box-shadow: 1px 1px 10px  #19FFAA ;
-    width: 20%;
-    background-color: #73f1c3;
+    box-shadow:  0px 0px 5px #EFEFEF, 0px 0px 6px #EFEFEF, 0px 0px 7px #EFEFEF, 0px 0px 8px #EFEFEF;
+    border: 2px solid  #19FFAA ;
+    cursor: pointer;
+}
+
+input[type="submit"]:active{
+    box-shadow: inset 0px 2px 15px   #19FFAA ;
 }
 
 /* END MAIN CONTENT ESTYLES*/
 
 
 
+/* START FOOTER STYLES*/
 
 footer{
     width: 100%;
     height: 150px;
-    background: linear-gradient(#19FFAA,  #73B9EB);
+    background: linear-gradient(#19FFAA,  #045B62);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    line-height: 150px;
+}
+
+footer span{
+    font-size: 20px;
+    color: var(--color-font-transition);
 }
 
