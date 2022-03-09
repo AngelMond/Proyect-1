@@ -202,14 +202,16 @@ aside a:hover{
     display: none;
 }
 
-@keyframes scoreSlide{
-    0%{
-        transform: translateX(800px);
-    }
-    100%{
-        transform: translateX(0px);
-    }
-}
+                            /* ANIMATION FOR SKILLS SCORE*/
+
+                            @keyframes scoreSlide{
+                                0%{
+                                    transform: translateX(800px);
+                                }
+                                100%{
+                                    transform: translateX(0px);
+                                }
+                            }
 
 #html5:hover .score,
 #css3:hover .score,
@@ -270,7 +272,7 @@ aside a:hover{
 
 
 
-/* STYLES FOR SECTION AND MY 3 ARTICLES*/
+/* STYLES FOR SECTION. MY 3 ARTICLES*/
 .articles{
    margin-bottom: 150px;
 }
@@ -319,6 +321,7 @@ aside a:hover{
 }
 
 
+
 /* PROYECTS*/
 
 
@@ -327,11 +330,18 @@ aside a:hover{
     flex-grow: 1;
     margin: 20px;
     text-align: center;
+    font-size: 18px;
 }
 
-#proyect1{
-    flex-grow: 2;
+/* DISPLAY FLEX FOR PROYECTS 2 TO 4*/
+#proyect2,
+#proyect3,
+#proyect4 {
+    display: flex;
+    flex-flow: column wrap;
 }
+
+
 
 /* STYLES FOR THE HEADER OF THE PROYECTS*/
 .proyect h4{
