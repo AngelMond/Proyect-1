@@ -463,8 +463,19 @@
 }
 
 @media screen and (max-width: 403px){
-    
+
     #navigationBar a{
         font-size:12px ;
     }
+
+    .proyect img {
+        width: 250px;
+        height: 180px;
+    }
+
+    #proyect2, 
+    #proyect3, 
+    #proyect4 {
+        align-items: center;
+      }
 }
