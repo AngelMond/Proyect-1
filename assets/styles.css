@@ -173,6 +173,51 @@ aside a:hover{
     margin: 5px;
 }
 
+#html5, 
+#css3,
+#javaScript{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+#html5 span,
+#css3 span,
+#javaScript span{
+    margin-top: 30px;
+    padding-left: 3px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor:pointer;
+}
+
+.score{
+    margin-top: 20px;
+    margin-left: 5px;
+    font-size: 20px;
+    display: none;
+}
+
+@keyframes scoreSlide{
+    0%{
+        transform: translateX(800px);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+
+#html5:hover .score,
+#css3:hover .score,
+#javaScript:hover .score{
+    display: block;
+    animation: scoreSlide 300ms linear;
+}
+
+
+
 /*DIV FOR RESUME*/
 
 #resume{
