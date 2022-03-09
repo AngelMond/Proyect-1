@@ -38,7 +38,7 @@ header h1{
 
 header h2{
     display: block;
-    margin: 10px ;
+    margin: 20px  10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
     color: var(--color-h1-h2);
@@ -53,7 +53,24 @@ header img{
 
 header nav{
     margin-top: 10px;
+    transition:  all 0.5s ease;
 }
+
+/* START STYLES NAVIGATION BAR FIXED WHEN SCROLL*/
+#navigationBar.active{
+    
+    background: linear-gradient(#19FFAA,  #6EBCE8);
+    position: fixed;
+    top: 0px;
+    right: 80px;
+    opacity: .9;
+    border-radius: 20px;
+}
+
+#navigationBar.active li:hover a{
+    color: white;
+}
+/* END STYLES NAVIGATION BAR FIXED WHEN SCROLL*/
 
 
 header ul{
@@ -142,7 +159,9 @@ aside a:hover{
     border: 1px solid var(--border-color);
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 1px 1px 5px #19FFAA, 0px 0px 6px #19FFAA, 0px 2px 7px #19FFAA, 2px 0px 10px #19FFAA, -2px -2px 10px #19FFAA;
+    
+    /* ANIMATION FOR ASIDE BAR DIVS*/
+    animation: changeBorder 5s infinite ;
 }
 
 
@@ -259,7 +278,6 @@ aside a:hover{
     flex-grow: 1;
     margin: 20px;
     text-align: center;
-    
 }
 
 #proyect1{
@@ -308,15 +326,14 @@ aside a:hover{
     transition: 290ms;
 }
 
+
 .proyect:hover .proyectLinks{
     display: block;
-    
 }
 
 /* FOCUS FOR MOBILE DEVICES TO DISPLAY LINKS*/
 .proyect:focus .proyectLinks{
     display: block;
-    
 }
 
 .proyect a:hover{
@@ -325,10 +342,11 @@ aside a:hover{
 
 
 .proyect:hover {
-
+    cursor: pointer;
     box-shadow: 0px 5px 5px #42E0C8, 0px 10px 10px #42E0C8, 0px -2px 5px #19FFAA, 0px 0px 6px #19FFAA, 0px 0px 7px #19FFAA, 0px 0px 10px #19FFAA;
     border: 2px solid  #19FFAA;
     border-radius: 10px;
+    animation: changeBorder 5s infinite ;
 }
 
 
@@ -337,32 +355,62 @@ aside a:hover{
 /*THIRD ARTICLE CONTACT*/
 #contact{
     flex-basis: 80%;
-    padding-top: 250px;
+    padding-top: 150px;
     text-align: center;
-    
 }
 
-.input{
-    margin: 20px;
-    
-}
-
+/* FORM TAG. CONTAINER FOR DIVS*/
 #contact form{
     width: 70%;
     margin: 0 auto;
     padding: 10px;
-   font-size: 18px;
+    font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
+
+    /* DISPLAY NONE FOR THE FORM*/
     
 }
+
+#contactH3{
+    cursor: pointer;
+}
+
+
+/* DIVS. CONTAINERS FOR INPUTS*/
+.input{
+    margin: 20px;
+}
+
 
 #contact form:hover {
     box-shadow: 0px 5px 5px #42E0C8, 0px 8px 9px #42E0C8, 0px 0px 7px #19FFAA, 0px -6px 10px #19FFAA, 0px -10px 15px #19FFAA;
     border: 1px solid var(--border-color);
     border-radius: 80px;
-}
+    
 
-/* FOCUS FOR MOBILE DEVICES TO DISPLAY STYLES*/
+
+
+            /* ANIMATION FOR CONTACT FORM*/
+
+                    animation: changeBorder 5s infinite;
+                }
+
+                @keyframes changeBorder{
+                    0%{
+                        box-shadow: 0px 5px 10px #42E0C8, 0px 8px 12px #42E0C8,  0px 8px 15px #42E0C8, 0px 0px 7px #19FFAA, 0px -6px 10px #19FFAA, 0px -10px 15px #19FFAA;
+                    }
+                    55%{
+                        box-shadow: 0px 3px 7px var(--border-color), 0px 5px 8px var(--border-color), 0px 0px 7px #19FFAA, 0px -6px 10px #19FFAA, 0px -10px 15px #19FFAA;
+                        
+                    }
+                    100%{
+                        box-shadow: 0px 5px 10px #42E0C8, 0px 8px 12px #42E0C8,  0px 8px 15px #42E0C8, 0px 0px 7px #19FFAA, 0px -6px 10px #19FFAA, 0px -10px 15px #19FFAA;
+                    }
+                }
+
+
+
+/* FOCUS. FOR MOBILE DEVICES TO DISPLAY STYLES*/
 #contact form:focus {
     box-shadow: 1px 1px 5px #19FFAA, 0px 0px 10px #19FFAA, 0px 0px 11px #19FFAA, 2px 0px 10px #19FFAA, -2px -2px 10px #19FFAA;
     border: 1px solid var(--border-color);
@@ -370,13 +418,26 @@ aside a:hover{
 }
 
 
+/* STYLES FOR INPUTS AND TEXTAREA*/
 input[type="text"],
-input[type="email"],
-input[type="textarea"] {
+input[type="email"] {
     width: 40%;
     height: 22px ;
     border-radius: 4px;
     outline: none;
+    padding: 5px;
+    border: 1px solid var(--color-h3-h4);
+}
+
+textarea{
+    outline: none;
+    width: 43%;
+    padding: 10px;
+    border: 1px solid var(--color-h3-h4);
+}
+
+#contact label{
+    color: var(--color-text);
 }
 
 input[type="submit"]{
@@ -395,7 +456,7 @@ input[type="submit"]:active{
     box-shadow: inset 0px 2px 15px   #19FFAA ;
 }
 
-/* END MAIN CONTENT ESTYLES*/
+/* END STYLES FOR MAIN CONTENT */
 
 
 
@@ -415,4 +476,22 @@ footer span{
     font-size: 20px;
     color: var(--color-font-transition);
 }
+
+footer a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+footer a:hover{
+    color: var(--color-h3-h4);
+    text-decoration: underline;
+}
+
+footer a:active{
+    color: var(--color-h3-h4);
+    text-decoration: underline;
+}
+
+/* END FOOTER STYLES*/
+
 
