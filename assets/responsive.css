@@ -410,6 +410,10 @@
         align-items: center;
     }
 
+    .articles h3{
+        font-size: 20px;
+    }
+
     #aboutMyself p {
         margin-left: 20px;
         margin-top: 20px;
@@ -456,4 +460,11 @@
       }
     
  
+}
+
+@media screen and (max-width: 403px){
+    
+    #navigationBar a{
+        font-size:12px ;
+    }
 }
