@@ -1,0 +1,226 @@
+
+
+@media screen and (max-width: 1980px){
+    #proyect1 {
+        flex-basis: 100%;
+
+    }
+
+    #proyect1 img{
+        width: 400px;
+        height: 300px;
+    }
+
+
+}
+
+@media screen and (max-width: 1500px){
+
+
+    #aside {
+        flex: 1 18% ;
+        margin-right: 10px;
+     }
+
+    #section{
+        flex: 1 60%;
+    }
+
+     #navigationBar.active{
+        right: 20px;
+    }
+
+    #html5 span, 
+    #css3 span, 
+    #javaScript span {
+       margin-top: 30px;
+       padding-left: 10px;
+       font-size: 18px;
+   }
+
+   .score{
+       margin-left: 25px;
+   }
+}
+
+@media screen and (max-width: 1200px){
+
+    
+     #html5 span, 
+     #css3 span, 
+     #javaScript span {
+        padding-left: 8px;
+        font-size: 17px;
+    }
+
+    #contact {
+        flex-basis: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-flow: row wrap;
+       justify-content: start;
+    }
+
+    #contactH3{
+        flex: 1 100%;
+    }
+
+    #contactForm{
+        flex: 1 100%;
+    }
+
+
+
+    .score{
+        font-size: 15px;
+    }
+
+    #navigationBar.active{
+        width: 50%;
+        height: 50px;
+        right: 35px;
+        padding-left: 1%;
+    }
+    
+    #navigationBar a{
+        font-size: 18px;
+    }
+
+    #navigationBar li{
+        margin: 4px;
+    }
+
+}
+
+@media screen and (max-width: 1000px){ 
+
+    #navigationBar.active{
+        width: 60%;
+        height: 50px;
+        right: 35px;
+        padding-left: 1%;
+    }
+
+   
+
+}
+
+@media screen and (max-width: 830px){ 
+
+    #navigationBar.active{
+        width: 58%;
+        height: 60px;
+        right: 35px;
+        padding-left: 4%;
+    }
+
+    #navigationBar li{
+        margin: 2px;
+        padding: 5px;
+        margin-top: 15px;
+    }
+
+    #navigationBar a{
+        font-size: 16px;
+    }
+
+    #socialMedia a{
+        font-size: 20px;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 768px){ 
+    #navigationBar.active{
+        top: -20px;
+        width: 58%;
+        height: 60px;
+        right: 20px;
+        padding-left: 4%;
+        border-top: none;
+    }
+
+    #navigationBar.active a{
+        font-size: 16px;
+    }
+
+    #aside{
+        flex-grow: 1 100%;
+        order: 2;
+    }
+
+    #section{
+        flex: 1 100%;
+        order: 1;
+    }
+
+    #navigationBar{
+        margin-top: 30px;
+    }
+
+    #navigationBar a{
+        font-size: 22px;
+    }
+
+    #navigationBar {
+        border-top: 1px solid #EFEFEF;
+    }
+
+    #mySkills,
+    #resume,
+    #socialMedia {
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    }
+
+    .articles{
+        margin-bottom: 100px;
+     }
+
+     #myWork h3{
+         margin-bottom: 20px;
+     }
+
+
+     #mySkills h3{
+         margin-bottom: 10px;
+     }
+     #imagesContainer{
+         display: flex;
+         flex-flow: row wrap;
+         justify-content: center;
+     }
+
+     #imagesContainer div{
+         flex: 1 100%;
+         margin-left: 100px;
+     }
+
+     #html5 span,
+     #css3 span,
+     #javaScript span{
+        font-size: 23px;
+     }
+
+    .score{
+        font-size: 27px;
+     }
+
+     .fontSymbols span {
+        font-size: 35px;
+      }
+
+      #socialMedia a {
+        font-size: 30px;
+      }
+
+      #contact {
+        padding-top: 70px;
+      }
+
+     
+}
