@@ -317,7 +317,6 @@ aside a:hover{
 #proyectsContainer{
     display: flex;
     flex-flow: row wrap ;
-    justify-content: space-evenly;
 }
 
 
@@ -328,7 +327,7 @@ aside a:hover{
 /* SIZE AND SPACE BETWEEN PROYECTS*/
 .proyect{
     flex-grow: 1;
-    margin: 20px;
+    margin: 40px ;
     text-align: center;
     font-size: 18px;
 }

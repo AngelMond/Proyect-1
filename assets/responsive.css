@@ -364,3 +364,96 @@
     }
  
 }
+
+
+@media  screen and (max-width: 428px){
+
+      /* HEADER*/
+      header h1{
+        font-size: 25px;
+    }
+    
+    header h2{
+        font-size: 18px;
+    }
+
+    #navigationBar.active{
+        position: fixed;
+        top: -10px;
+        width: 70%;
+        height: 35px;
+        right: 20px;
+        padding-left: 5%;
+        
+    }
+
+    #navigationBar.active a{
+        font-size: 10px;
+    }
+
+    #navigationBar.active li{
+        padding: 0px;
+        margin: 5px 2px;
+        border-right: 1px solid #23F9B0;
+        line-height: 20px;
+        padding-right: 2px;
+    }
+
+    #navigationBar.active li:last-child{
+        border-right: none;
+    }
+
+
+    .articles{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    #aboutMyself p {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .proyect{
+        margin: 30px 0px;
+        animation: changeBorder 5s infinite;
+        
+    }
+
+    .proyectLinks{
+        display: block;
+    }
+
+    #contact form {
+        padding: 10px 0px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+
+    .input {
+        margin: 5px 2px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      input[type="text"], 
+      input[type="email"],
+      textarea {
+        width: 70%;
+      }
+
+
+      #submit{
+          width: 70%;
+      }
+      input[type="submit"]{
+        width: 30%;
+         
+      }
+    
+ 
+}
